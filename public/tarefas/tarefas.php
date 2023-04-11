@@ -64,7 +64,7 @@ $tarefasConcluidas = $tarefasController->buscarTarefasConcluidas();
                         <td><?php echo $tarefa->status; ?></td>
                         <td class="text-right">
                             <button type="button" class="btn btn-sm btn-primary mr-2" onclick="location.href='../tarefas/Editar.php?id=<?php echo $tarefa->id; ?>';">Editar</button>
-                            <button type="button" class="btn btn-sm btn-danger" onclick="location.href='../controllerTarefas/deletartarefa.php?id=<?php echo $tarefa->id; ?>';">Deletar</button>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="if (confirm('Tem certeza que deseja deletar?')) { location.href='../controllerTarefas/deletartarefa.php?id=<?php echo $tarefa->id; ?>'; }">Deletar</button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -88,7 +88,7 @@ $tarefasConcluidas = $tarefasController->buscarTarefasConcluidas();
                         <td><?php echo $tarefa->status; ?></td>
                         <td class="text-right">
                             <button type="button" class="btn btn-sm btn-primary mr-2" onclick="location.href='../tarefas/Editar.php?id=<?php echo $tarefa->id; ?>';">Editar</button>
-                            <button type="button" class="btn btn-sm btn-danger" onclick="location.href='../controllerTarefas/deletartarefa.php?id=<?php echo $tarefa->id; ?>';">Deletar</button>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="if (confirm('Tem certeza que deseja deletar?')) { location.href='../controllerTarefas/deletartarefa.php?id=<?php echo $tarefa->id; ?>'; }">Deletar</button>
                         </td>
                     </tr>
                 <?php endforeach; ?>

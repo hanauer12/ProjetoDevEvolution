@@ -54,6 +54,15 @@ if (!isset($_SESSION['id_usuario'])) {
         </div>
     </div>
 </div>
+<script>
+    // Verifique se há uma mensagem de erro na variável de sessão
+    <?php if (isset($_SESSION['error_message'])): ?>
+    // Exiba a mensagem de erro em um pop-up
+    alert("<?php echo $_SESSION['error_message']; ?>");
+    // Limpe a variável de sessão
+    <?php unset($_SESSION['error_message']); ?>
+    <?php endif; ?>
+</script>
 </body>
 
 </html>

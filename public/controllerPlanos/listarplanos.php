@@ -27,10 +27,7 @@ class PlanosController {
         $planos = $this->planoDeEstudos->buscarPlanosConcluidos();
         return $planos;
     }
-    public function atualizarPlano($id, $nome_plano, $data_inicio, $data_termino, $objetivo_estudo, $recursos_estudo, $notas_adicionais)
-    {
-        return $this->planoDeEstudos->atualizarPlanoDeEstudo($id, $nome_plano, $data_inicio, $data_termino, $objetivo_estudo, $recursos_estudo, $notas_adicionais);
-    }
+
 
     public function obterPlanoDeEstudo($id) {
         return $this->planoDeEstudos->buscarPlanoDeEstudoPorId($id);

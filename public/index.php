@@ -54,6 +54,8 @@ $porcentagemPlanosConcluidos = ($totalPlanos > 0) ? ($planosConcluidos / $totalP
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Inclua o CanvasJS -->
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
 </head>
 <body>
 <div class="sidenav">
@@ -81,18 +83,18 @@ $porcentagemPlanosConcluidos = ($totalPlanos > 0) ? ($planosConcluidos / $totalP
     <a href="login/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 
-<div class="container-fluid" style="margin-left: 200px;">
+<div class="container-fluid" style="margin-left: 300px;">
     <div class="container-fluid">
         <div class="row mt-4">
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div id="chartContainer1" style="height: 340px; width: 120%;"></div>
+                        <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
                     </div>
                     <div class="col-md-6">
 
-                        <div id="chartContainer2" style="height: 340px; width: 120%;"></div>
+                        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -105,6 +107,7 @@ $porcentagemPlanosConcluidos = ($totalPlanos > 0) ? ($planosConcluidos / $totalP
         const porcentagemPlanosEmAndamento = <?php echo $porcentagemPlanosEmAndamento; ?>;
         const porcentagemPlanosConcluidos = <?php echo $porcentagemPlanosConcluidos; ?>;
     </script>
+
 
     <!-- O conteúdo do seu arquivo HTML deve permanecer o mesmo, sem a parte <style> e sem os scripts JavaScript no final. -->
 </body>

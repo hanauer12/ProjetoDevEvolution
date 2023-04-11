@@ -1,11 +1,12 @@
 <?php
 
 
-
 $host = 'mariadb';
 $dbname = 'DEVEVOLUTION';
 $username = 'root';
 $password = 'mariadb';
+
+
 
 function connectMysql() {
     global $host, $dbname, $username, $password;

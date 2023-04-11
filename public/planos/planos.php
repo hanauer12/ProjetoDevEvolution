@@ -57,8 +57,7 @@ $planosConcluidos = $planosController->buscarPlanosConcluidos();
                         <td><?php echo $plano->status; ?></td>
                         <td class="text-right">
                             <a href="Editar.php?id=<?php echo $plano->id; ?>" class="btn btn-primary">Editar</a>
-
-                            <button type="button" class="btn btn-sm btn-danger" onclick="location.href='../controllerPlanos/deletarplano.php?id=<?php echo $plano->id; ?>';">Deletar</button>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="if (confirm('Tem certeza que deseja deletar?')) { location.href='../controllerPlanos/deletarplano.php?id=<?php echo $plano->id; ?>'; }">Deletar</button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -83,9 +82,7 @@ $planosConcluidos = $planosController->buscarPlanosConcluidos();
                         <td><?php echo $plano->status; ?></td>
                         <td class="text-right">
                             <a href="Editar.php?id=<?php echo $plano->id; ?>" class="btn btn-primary">Editar</a>
-
-
-                            <button type="button" class="btn btn-sm btn-danger" onclick="location.href='../controllerPlanos/deletarplano.php?id=<?php echo $plano->id; ?>';">Deletar</button>
+                            <button type="button" class="btn btn-sm btn-danger" onclick="if (confirm('Tem certeza que deseja deletar?')) { location.href='../controllerPlanos/deletarplano.php?id=<?php echo $plano->id; ?>'; }">Deletar</button>
                         </td>
                     </tr>
                 <?php endforeach; ?>

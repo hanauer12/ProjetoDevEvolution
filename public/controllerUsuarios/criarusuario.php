@@ -17,5 +17,8 @@ try {
     $usuario->criarUsuario($nome, $email, $telefone, $senha, $data_nascimento);
     header("Location: ../login/editarusuario.php");
 } catch (Exception $e) {
-    echo $e->getMessage();
+    //se tiver exceção armazena na variavel
+    $_SESSION['error_message'] = $e->getMessage();
+    header("Location: ../login/registrar.php");
+
 }
