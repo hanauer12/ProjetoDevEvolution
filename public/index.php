@@ -1,17 +1,36 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: login.php');
+    exit;
+}
+use App\Classes\PlanoDeEstudos;
+use App\Classes\Tarefas;
+
 require_once  'Classes/Tarefas.php';
-//require_once  'Classes/Planos.php';
+require_once  'Classes/Planos.php';
 require_once 'DB/connectMysql.php';
 $pdo = connectMysql();
 
 $tarefas = new Tarefas($pdo);
-//$planos = new PlanoDeEstudos($pdo);
+$planos = new PlanoDeEstudos($pdo);
+
 
 $tarefasEmAndamento = count($tarefas->buscarTarefasEmAndamento());
 $tarefasConcluidas = count($tarefas->buscarTarefasConcluidas());
+$planosEmAndamento = count($planos->buscarPlanosEmAndamento());
+$planosConcluidos = count($planos->buscarPlanosConcluidos());
 
-//$planosemandamento = count($planos->buscarPlanosConcluidos);
-//$planosconcluidos = count($planos->buscarPlanosEmAndamento);
+$totalTarefas = $tarefasEmAndamento + $tarefasConcluidas;
+$porcentagemTarefasEmAndamento = ($totalTarefas > 0) ? ($tarefasEmAndamento / $totalTarefas) * 100 : 0;
+$porcentagemTarefasConcluidas = ($totalTarefas > 0) ? ($tarefasConcluidas / $totalTarefas) * 100 : 0;
+
+$totalPlanos = $planosEmAndamento + $planosConcluidos;
+$porcentagemPlanosEmAndamento = ($totalPlanos > 0) ? ($planosEmAndamento / $totalPlanos) * 100 : 0;
+$porcentagemPlanosConcluidos = ($totalPlanos > 0) ? ($planosConcluidos / $totalPlanos) * 100 : 0;
+
+
 ?>
 
 
@@ -81,11 +100,12 @@ $tarefasConcluidas = count($tarefas->buscarTarefasConcluidas());
     </div>
     <script src="javascript/scripts.js"></script>
     <script>
-        const tarefasEmAndamento = <?php echo $tarefasEmAndamento; ?>;
-        const tarefasConcluidas = <?php echo $tarefasConcluidas; ?>;
-
-
+        const porcentagemTarefasEmAndamento = <?php echo $porcentagemTarefasEmAndamento; ?>;
+        const porcentagemTarefasConcluidas = <?php echo $porcentagemTarefasConcluidas; ?>;
+        const porcentagemPlanosEmAndamento = <?php echo $porcentagemPlanosEmAndamento; ?>;
+        const porcentagemPlanosConcluidos = <?php echo $porcentagemPlanosConcluidos; ?>;
     </script>
-<!-- O conteúdo do seu arquivo HTML deve permanecer o mesmo, sem a parte <style> e sem os scripts JavaScript no final. -->
+
+    <!-- O conteúdo do seu arquivo HTML deve permanecer o mesmo, sem a parte <style> e sem os scripts JavaScript no final. -->
 </body>
 </html>

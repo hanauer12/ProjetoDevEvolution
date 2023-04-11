@@ -1,4 +1,6 @@
 <?php
+ob_start();
+use App\Classes\Tarefas;
 require_once '../DB/connectMysql.php'; // Importe o arquivo de conexão com o banco de dados
 require_once '../Classes/Tarefas.php'; // Importe o arquivo da classe Tarefas
 
@@ -17,9 +19,9 @@ $pdo = connectMysql();
         $tarefas = new Tarefas($pdo);
         try {
             $tarefas->criarTarefa($nome_da_tarefa, $data_de_inicio, $prazo, $prioridade, $descricao, $status, $responsavel, $observacoes);
-          //  header("Location: ../tarefas/tarefas.php");
+           header("Location: ../tarefas/tarefas.php");
             exit;
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => $e->getMessage()]);
         }
-
+ob_end_clean();

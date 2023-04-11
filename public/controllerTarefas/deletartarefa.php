@@ -1,4 +1,6 @@
 <?php
+ob_start();
+use App\Classes\Tarefas;
 require_once '../DB/connectMysql.php';
 require_once '../Classes/Tarefas.php';
 $pdo = connectMysql();
@@ -13,9 +15,10 @@ $id = intval($_GET['id']);
 try {
     $tarefaObj = new Tarefas($pdo);
     $tarefaObj->deletarTarefa($id);
-   // header("Location: ../tarefas/tarefas.php");
+   header("Location: ../tarefas/tarefas.php");
     exit;
 } catch (Exception $e) {
     die("Erro ao deletar tarefa: " . $e->getMessage());
 }
+ob_end_clean();
 ?>

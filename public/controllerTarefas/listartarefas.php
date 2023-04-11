@@ -1,7 +1,7 @@
 <?php
 require_once '../Classes/Tarefas.php';
 require_once '../DB/connectMysql.php';
-
+use App\Classes\Tarefas;
 $pdo = connectMysql();
 class TarefasController {
     private $tarefa;

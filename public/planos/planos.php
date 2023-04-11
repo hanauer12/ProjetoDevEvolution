@@ -1,8 +1,14 @@
 <?php
+
+
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: /login.php');
+    exit;
+}
+
 require_once '../controllerPlanos/listarplanos.php';
-
-$pdo = connectMysql();
-
 $planosController = new PlanosController($pdo);
 $planosEmAndamento = $planosController->planosEmAndamento();
 $planosConcluidos = $planosController->buscarPlanosConcluidos();

@@ -1,7 +1,13 @@
 <?php
-session_start();
-?>
 
+
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: /login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,6 +27,7 @@ session_start();
         echo "<div class='alert alert-info'>" . $_SESSION['mensagem'] . "</div>";
         unset($_SESSION['mensagem']);
     }
+    use App\Classes\Usuario;
     require_once '../Classes/Usuario.php';
     require_once '../DB/connectMysql.php';
     $pdo = connectMysql();

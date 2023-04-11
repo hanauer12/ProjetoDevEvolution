@@ -1,4 +1,5 @@
 <?php
+use App\Classes\Usuario;
 require_once '../DB/connectMysql.php';
 require_once '../Classes/Usuario.php';
 

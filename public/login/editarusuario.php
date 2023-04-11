@@ -1,3 +1,13 @@
+<?php
+
+
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: /login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,7 +45,7 @@
                     if (isset($_GET['updated']) && $_GET['updated'] == '1') {
                         header("refresh:5;url=index.php");
                     }
-
+                    use App\Classes\Usuario;
                     require_once '../Classes/Usuario.php';
                     require_once '../DB/connectMysql.php';
                     $pdo = connectMysql();

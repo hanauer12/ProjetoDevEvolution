@@ -1,5 +1,7 @@
 <?php
 
+
+
 $host = 'mariadb';
 $dbname = 'DEVEVOLUTION';
 $username = 'root';

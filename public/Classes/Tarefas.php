@@ -1,4 +1,10 @@
-    <?php
+<?php
+
+namespace App\Classes;
+
+use PDO;
+
+
     class Tarefas
     {
         private $pdo;

@@ -1,9 +1,15 @@
 <?php
 
 session_start();
+use App\Classes\Usuario;
+require_once 'DB/connectMysql.php';
+require_once "Classes/Usuario.php";
 
-if (!isset($_SESSION['id_usuario'])) {
-    header('Location: /login.php');
+$pdo = connectMysql();
+$usuario = new Usuario($pdo);
+
+if ($usuario->existeUsuario()) {
+    echo "<script>alert('Já existe um usuário cadastrado. Entre em contato com o administrador do sistema.'); location.href='/login.php';</script>";
     exit;
 }
 
@@ -22,8 +28,7 @@ if (!isset($_SESSION['id_usuario'])) {
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <a href="../index.php" class="btn btn-primary float-left mr-3">Voltar</a>
-            <h2>Cadastro de Usuário</h2>
+            <h2>Cadastrar Primeiro Usuario</h2>
             <form method="post" action="../controllerUsuarios/criarusuario.php">
                 <div class="form-group">
                     <label for="nome">Nome:</label>

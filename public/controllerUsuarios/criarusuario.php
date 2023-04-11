@@ -1,17 +1,7 @@
 <?php
-
-$servername = "mariadb";
-$username = "root";
-$password = "mariadb";
-$dbname = "DEVEVOLUTION";
-
-try {
-    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    throw new Exception("Erro ao conectar com o banco de dados: " . $e->getMessage());
-}
-
+use App\Classes\Usuario;
+require_once '../DB/connectMysql.php';
+$pdo = connectMysql();
 require_once "../Classes/Usuario.php";
 
 $nome = $_POST["nome"];

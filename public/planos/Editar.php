@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: /login.php');
+    exit;
+}
+?>
+<?php
 require_once '../controllerPlanos/listarplanos.php';
 
 $pdo = connectMysql();
@@ -41,7 +50,7 @@ $plano = $planosController->obterPlanoDeEstudo($_GET['id']);
                             <label for="status">Status</label>
                             <select class="form-control" id="status" name="status" required>
                                 <option value="Em andamento" <?php echo $plano->status == 'Em andamento' ? 'selected' : ''; ?>>Em andamento</option>
-                                <option value="Finalizado" <?php echo $plano->status == 'Concluido' ? 'selected' : ''; ?>>Concluido</option>
+                                <option value="Concluido" <?php echo $plano->status == 'Concluido' ? 'selected' : ''; ?>>Concluido</option>
                                 <option value="Cancelado" <?php echo $plano->status == 'Cancelado' ? 'selected' : ''; ?>>Cancelado</option>
                             </select>
                         </div>

@@ -1,4 +1,9 @@
 <?php
+
+namespace App\Classes;
+use PDO;
+
+
 class Usuario {
     private $pdo;
 
@@ -90,6 +95,14 @@ class Usuario {
             return false;
         }
     }
+    public function existeUsuario() {
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM usuarios");
+        $stmt->execute();
+        $totalUsuarios = $stmt->fetchColumn();
+
+        return $totalUsuarios > 0;
+    }
+
 
 
 

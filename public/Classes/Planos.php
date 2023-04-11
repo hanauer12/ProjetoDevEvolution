@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Classes;
+use PDO;
+
 class PlanoDeEstudos
 {
     private $pdo;
@@ -44,7 +47,7 @@ class PlanoDeEstudos
 
     public function buscarPlanosConcluidos()
     {
-        $sql = "SELECT * FROM planos_de_estudo WHERE status = 'Finalizado'";
+        $sql = "SELECT * FROM planos_de_estudo WHERE status = 'Concluído'";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -80,9 +83,5 @@ class PlanoDeEstudos
         $stmt->execute();
     }
 
-
-
-
-
-
 }
+?>

@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+use App\Classes\Usuario;
+
 require_once '../Classes/Usuario.php';
 require_once '../DB/connectMysql.php';
 $pdo = connectMysql();

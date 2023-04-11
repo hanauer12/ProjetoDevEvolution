@@ -1,4 +1,7 @@
 <?php
+session_start();
+use App\Classes\Usuario;
+
 // incluir a classe Usuario e conectar ao banco de dados
 require_once '../Classes/Usuario.php';
 require_once '../DB/connectMysql.php';
@@ -21,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($idUsuario) {
         // define a variável de sessão
         $_SESSION['id_usuario'] = $idUsuario;
+
         // redireciona para a página index.php
         header("Location: /index.php");
         exit();

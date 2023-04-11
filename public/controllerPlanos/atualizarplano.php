@@ -1,4 +1,6 @@
 <?php
+
+use App\Classes\PlanoDeEstudos;
 require_once '../Classes/Planos.php';
 require_once '../DB/connectMysql.php';
 $pdo = connectMysql();

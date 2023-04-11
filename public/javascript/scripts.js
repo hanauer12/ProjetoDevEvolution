@@ -1,17 +1,11 @@
 window.onload = function () {
-    const totalTarefas = tarefasEmAndamento + tarefasConcluidas;
-
-    const percentualTarefasEmAndamento = (tarefasEmAndamento / totalTarefas) * 100;
-    const percentualTarefasConcluidas = (tarefasConcluidas / totalTarefas) * 100;
-
     var chart1 = createChart("chartContainer1", "Planos de Estudo", [
-        { y: 20, name: "Em andamento" },
-        { y: 80, name: "Concluído", exploded: true }
+        { y: porcentagemPlanosEmAndamento, name: "Em andamento" },
+        { y: porcentagemPlanosConcluidos, name: "Concluído", exploded: true }
     ]);
-
     var chart2 = createChart("chartContainer2", "Tarefas", [
-        { y: percentualTarefasConcluidas, name: "Concluídas", exploded: true },
-        { y: percentualTarefasEmAndamento, name: "Pendentes e Em progresso" }
+        { y: porcentagemTarefasConcluidas, name: "Concluídas", exploded: true },
+        { y: porcentagemTarefasEmAndamento, name: "Pendentes" }
     ]);
 
     chart1.render();
