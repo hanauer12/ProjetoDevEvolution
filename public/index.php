@@ -23,12 +23,12 @@ $planosEmAndamento = count($planos->buscarPlanosEmAndamento());
 $planosConcluidos = count($planos->buscarPlanosConcluidos());
 
 $totalTarefas = $tarefasEmAndamento + $tarefasConcluidas;
-$porcentagemTarefasEmAndamento = ($totalTarefas > 0) ? ($tarefasEmAndamento / $totalTarefas) * 100 : 0;
-$porcentagemTarefasConcluidas = ($totalTarefas > 0) ? ($tarefasConcluidas / $totalTarefas) * 100 : 0;
+$porcentagemTarefasEmAndamento = round(($totalTarefas > 0) ? ($tarefasEmAndamento / $totalTarefas) * 100 : 0);
+$porcentagemTarefasConcluidas = round(($totalTarefas > 0) ? ($tarefasConcluidas / $totalTarefas) * 100 : 0);
 
 $totalPlanos = $planosEmAndamento + $planosConcluidos;
-$porcentagemPlanosEmAndamento = ($totalPlanos > 0) ? ($planosEmAndamento / $totalPlanos) * 100 : 0;
-$porcentagemPlanosConcluidos = ($totalPlanos > 0) ? ($planosConcluidos / $totalPlanos) * 100 : 0;
+$porcentagemPlanosEmAndamento = round(($totalPlanos > 0) ? ($planosEmAndamento / $totalPlanos) * 100 : 0);
+$porcentagemPlanosConcluidos = round(($totalPlanos > 0) ? ($planosConcluidos / $totalPlanos) * 100 : 0);
 
 
 ?>
