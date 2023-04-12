@@ -73,7 +73,7 @@ Temos a estrutura definida por Classes e Controlladores, alem da estrutura que t
 
 Temos definido também a tela de login e a tela de Primeiro Usuário que pode ser usada  para cadastrar o primeiro usuário e se existe um usuário criado no banco a tela não é mais acessível.
 
-Com o primeiro Usuário criado, somos direcionados a tela de login, após acessar a tela de login temos nossa dashboard e um menu lateral referente a aplicação.
+Com o primeiro Usuário criado, somos direcionados a tela de login, após acessar a tela de login temos nossa dashboard que são geradas com chart.js , atualizando conforme é alterado no banco de dados, e um menu lateral referente a aplicação.
 
 Temos um CRUD de Tarefas e Planos de estudos com todas as funções de criar, editar, listar e deletar.
 
