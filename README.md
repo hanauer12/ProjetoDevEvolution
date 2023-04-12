@@ -77,4 +77,32 @@ Com o primeiro Usuário criado, somos direcionados a tela de login, após acessa
 
 Temos um CRUD de Tarefas e Planos de estudos com todas as funções de criar, editar, listar e deletar.
 
-Também temos o controle dos usuarios, onde podemos criar, editar, listar e deletar os usuários.
+Também temos o controle dos usuarios, onde podemos criar editar, listar e deletar os usuários.
+
+### Referencias:
+
+https://www.devmedia.com.br/orientacao-a-objetos-e-pdo-no-php/32644
+<br>
+
+https://www.php.net/manual/pt_BR/language.oop5.php
+<br>
+
+https://www.w3schools.com/
+<br>
+
+https://chat.openai.com/chat
+<br>
+https://www.phpit.com.br/artigos/entendendo-pra-que-serve-ob-start-ob-end-flush-ob-get-contents-e-afins.phpit
+<br>
+
+https://canvasjs.com/javascript-charts/
+<br>
+
+https://www.chartjs.org/
+<br>
+
+https://www.php.net/manual/en/language.namespaces.php
+<br>
+
+https://www.alura.com.br/artigos/organizando-seu-codigo-com-namespace
+
