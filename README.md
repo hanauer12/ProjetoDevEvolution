@@ -25,7 +25,7 @@ Listara 3 containers, 1 de PHP outro de nginx e outro de mysql.
 Acessando de dentro da rede da empresa, temos a aplicação disponivel e rodando em:
 `http://192.168.27.252:8888/PrimeiroUsuario.php` 
 
-` ├── Classes
+` ├── Classes` 
 │   ├── Planos.php
 │   ├── Tarefas.php
 │   └── Usuario.php
