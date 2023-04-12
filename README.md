@@ -16,6 +16,7 @@ git clone git@github.com:hanauer12/ProjetoDevEvolution.git
 ## Validar se todos containers estão UP
 
 `docker ps`
+<br>
 Listara 3 containers, 1 de PHP outro de nginx e outro de mysql.
 
 ### Acessar aplicação:
