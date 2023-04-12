@@ -25,45 +25,46 @@ Listara 3 containers, 1 de PHP outro de nginx e outro de mysql.
 Acessando de dentro da rede da empresa, temos a aplicação disponivel e rodando em:
 `http://192.168.27.252:8888/PrimeiroUsuario.php` 
 
-` ├── Classes `
-`│   ├── Planos.php`
-`│   ├── Tarefas.php`
-│   └── Usuario.php
+.
+├── Classes
+│   ├── Planos.php
+│   ├── Tarefas.php
+│   └── Usuario.php
 ├── controllerPlanos
-│   ├── atualizarplano.php
-│   ├── criarplano.php
-│   ├── deletarplano.php
-│   └── listarplanos.php
+│   ├── atualizarplano.php
+│   ├── criarplano.php
+│   ├── deletarplano.php
+│   └── listarplanos.php
 ├── controllerTarefas
-│   ├── atualizartarefa.php
-│   ├── criartarefa.php
-│   ├── deletartarefa.php
-│   └── listartarefas.php
+│   ├── atualizartarefa.php
+│   ├── criartarefa.php
+│   ├── deletartarefa.php
+│   └── listartarefas.php
 ├── controllerUsuarios
-│   ├── atualizarusuario.php
-│   ├── criarusuario.php
-│   ├── deletarusuario.php
-│   └── verificalogin.php
+│   ├── atualizarusuario.php
+│   ├── criarusuario.php
+│   ├── deletarusuario.php
+│   └── verificalogin.php
 ├── css
-│   └── styles.css
+│   └── styles.css
 ├── DB
-│   └── connectMysql.php
+│   └── connectMysql.php
 ├── index.php
 ├── javascript
-│   └── scripts.js
+│   └── scripts.js
 ├── login
-│   ├── atualizarusuario.php
-│   ├── editarusuario.php
-│   ├── logout.php
-│   └── registrar.php
+│   ├── atualizarusuario.php
+│   ├── editarusuario.php
+│   ├── logout.php
+│   └── registrar.php
 ├── login.php
 ├── planos
-│   ├── Criar.php
-│   ├── Editar.php
-│   └── planos.php
+│   ├── Criar.php
+│   ├── Editar.php
+│   └── planos.php
 ├── PrimeiroUsuario.php
 └── tarefas
     ├── Criar.php
     ├── Editar.php
     └── tarefas.php
-` 
+
