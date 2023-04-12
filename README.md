@@ -92,6 +92,7 @@ https://www.w3schools.com/
 
 https://chat.openai.com/chat
 <br>
+
 https://www.phpit.com.br/artigos/entendendo-pra-que-serve-ob-start-ob-end-flush-ob-get-contents-e-afins.phpit
 <br>
 
